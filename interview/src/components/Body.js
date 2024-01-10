@@ -7,12 +7,12 @@ import "bootstrap/dist/css/bootstrap.css";
 const Body = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchProduct = async () => {
       const response = await fetch("https://fakestoreapi.com/products");
       const data = await response.json();
       setProducts(data);
     };
-    fetchUser();
+    fetchProduct();
   }, []);
 
   return (
